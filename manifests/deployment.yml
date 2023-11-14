@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hemanthrundevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hemanthrundevops
+  template:
+    metadata:
+      labels:
+        app: hemanthrundevops 
+    spec:
+      containers:
+        - name: hemanthrundevops 
+          image: shopping1.azurecr.io/hemanthrundevops
+          ports:
+          - containerPort: 80
